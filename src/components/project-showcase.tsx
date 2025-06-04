@@ -1,14 +1,15 @@
+
 import SectionTitle from '@/components/shared/section-title';
 import ProjectCard from '@/components/project-card';
 
 const projects = [
   {
-    title: 'Android Chat Application',
-    description: 'An Android application built with Java and XML, utilizing Firebase for real-time chat functionalities including adding, deleting, and updating messages.',
+    title: 'Android Note Taking App',
+    description: 'An Android application built with Java and XML, utilizing Firebase for functionalities like adding, deleting, and updating notes.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'chat mobile',
+    imageHint: 'note mobile',
     tags: ['Java', 'XML', 'Firebase', 'Android'],
-    repoLink: 'https://github.com/Amit-kumar80844/Androd_Note_app', // Updated
+    repoLink: 'https://github.com/Amit-kumar80844/Androd_Note_app',
   },
   {
     title: 'SleepWell: AI-Powered Sleep Assistant',
@@ -16,7 +17,7 @@ const projects = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'sleep mobile',
     tags: ['Kotlin', 'Jetpack Compose', 'RoomDB', 'Firebase Auth', 'MVVM', 'Android', 'AI', 'API Integration'],
-    repoLink: 'https://github.com/Amit-kumar80844/SleepHelperApp', // Updated
+    repoLink: 'https://github.com/Amit-kumar80844/SleepHelperApp',
   },
   {
     title: 'Desktop Weather Forecaster',
@@ -24,7 +25,7 @@ const projects = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'weather desktop',
     tags: ['Python', 'Weather API', 'Desktop App'],
-    repoLink: 'https://github.com/Amit-kumar80844/Weather-app', // Updated
+    repoLink: 'https://github.com/Amit-kumar80844/Weather-app',
   },
    {
     title: 'MyFinance Tracker Website',
@@ -32,7 +33,7 @@ const projects = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'finance web',
     tags: ['Flask', 'Python', 'HTML', 'CSS', 'SQL', 'Web App'],
-    repoLink: 'https://github.com/Amit-kumar80844/Personal-Finance-tracker', // Updated
+    repoLink: 'https://github.com/Amit-kumar80844/Personal-Finance-tracker',
   },
   {
     title: 'Console-Based Learning Management System',
@@ -40,7 +41,7 @@ const projects = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'console code',
     tags: ['Java', 'Console App', 'LMS'],
-    repoLink: 'https://github.com/Amit-kumar80844/LMS_in_java', // Updated
+    repoLink: 'https://github.com/Amit-kumar80844/LMS_in_java',
   }
 ];
 
