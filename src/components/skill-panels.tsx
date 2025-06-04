@@ -1,18 +1,17 @@
 import SectionTitle from '@/components/shared/section-title';
 import SkillCard from '@/components/skill-card';
-import { Code2, Palette, Server, Cloud, Smartphone, Database, Wand2, Brain } from 'lucide-react'; // Added Wand2 for UI/UX, Brain for AI/ML
+import { Code2, Smartphone, Database } from 'lucide-react'; // Updated imports
 
 const skills = [
-  { title: 'Kotlin', icon: <Code2 />, category: 'Languages & Frameworks' },
-  { title: 'Python', icon: <Code2 />, category: 'Languages & Frameworks' },
-  { title: 'JavaScript/TypeScript', icon: <Code2 />, category: 'Languages & Frameworks' },
-  { title: 'React/Next.js', icon: <Smartphone />, category: 'Frontend' },
-  { title: 'Node.js/Express', icon: <Server />, category: 'Backend' },
-  { title: 'UI/UX Design', icon: <Palette />, category: 'Design' },
-  { title: 'Responsive Design', icon: <Wand2 />, category: 'Design' },
-  { title: 'Databases (SQL/NoSQL)', icon: <Database />, category: 'Backend' },
-  { title: 'Cloud Platforms (AWS/GCP)', icon: <Cloud />, category: 'DevOps & Cloud' },
-  { title: 'AI/ML Integration', icon: <Brain />, category: 'Specialized Skills' },
+  { title: 'Android Development', icon: <Smartphone /> },
+  { title: 'Kotlin', icon: <Code2 /> },
+  { title: 'Jetpack Compose', icon: <Smartphone /> },
+  { title: 'Java', icon: <Code2 /> },
+  { title: 'Python', icon: <Code2 /> },
+  { title: 'C/C++', icon: <Code2 /> },
+  { title: 'SQL', icon: <Database /> },
+  { title: 'Firebase', icon: <Database /> },
+  { title: 'Room Database', icon: <Database /> },
 ];
 
 const SkillPanels: React.FC = () => {
