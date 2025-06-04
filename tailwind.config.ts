@@ -1,7 +1,7 @@
 import type {Config} from 'tailwindcss';
 
 export default {
-  darkMode: ['class'],
+  darkMode: ['class'], // Keep 'class' strategy
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -11,8 +11,8 @@ export default {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
-        code: ['monospace'],
+        headline: ['Space Grotesk', 'sans-serif'],
+        code: ['Source Code Pro', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -88,11 +88,26 @@ export default {
             height: '0',
           },
         },
+        subtleGradientShift: { // Added for background animation
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+        pulseGlow: {
+          '0%, 100%': { boxShadow: '0 0 5px hsl(var(--primary)/0.7), 0 0 10px hsl(var(--primary)/0.5)' },
+          '50%': { boxShadow: '0 0 10px hsl(var(--primary)/0.9), 0 0 20px hsl(var(--primary)/0.7)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'subtle-gradient': 'subtleGradientShift 20s ease infinite', // Added for background animation
+        'pulse-glow': 'pulseGlow 3s infinite ease-in-out',
       },
+      boxShadow: {
+        'glow-primary': '0 0 15px 2px hsl(var(--primary)/0.6), 0 0 8px hsl(var(--primary)/0.4)',
+        'glow-accent': '0 0 15px 2px hsl(var(--accent)/0.6), 0 0 8px hsl(var(--accent)/0.4)',
+      }
     },
   },
   plugins: [require('tailwindcss-animate')],
