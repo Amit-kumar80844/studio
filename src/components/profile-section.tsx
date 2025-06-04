@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { AtSign, Github, Linkedin, Briefcase, Mail, Code2 } from 'lucide-react';
+import { AtSign, Github, Linkedin, Briefcase, Mail, Code2, GitBranch } from 'lucide-react';
 
 const ProfileSection: React.FC = () => {
   return (
@@ -49,6 +49,10 @@ const ProfileSection: React.FC = () => {
               <Code2 className="w-5 h-5 text-accent group-hover:text-primary transition-colors" />
               <span>geeksforgeeks.org/user/amitsingjsg4</span>
             </a>
+            <div className="flex items-center gap-3 hover:text-primary transition-colors group">
+              <GitBranch className="w-5 h-5 text-accent group-hover:text-primary transition-colors" />
+              <span>AnkiDroid Contributor (Open Source)</span>
+            </div>
              <div className="flex items-center gap-3">
                 <Briefcase className="w-5 h-5 text-accent"/>
                 <span>Exploring opportunities</span>

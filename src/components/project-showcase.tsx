@@ -8,8 +8,7 @@ const projects = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'chat mobile',
     tags: ['Java', 'XML', 'Firebase', 'Android'],
-    // liveLink: '#', // Add live link if available
-    // repoLink: '#', // Add repo link if available
+    repoLink: 'https://github.com/Amit-kumar80844/android-chat-application',
   },
   {
     title: 'SleepWell: AI-Powered Sleep Assistant',
@@ -17,8 +16,7 @@ const projects = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'sleep mobile',
     tags: ['Kotlin', 'Jetpack Compose', 'RoomDB', 'Firebase Auth', 'MVVM', 'Android', 'AI', 'API Integration'],
-    // liveLink: '#',
-    // repoLink: '#',
+    repoLink: 'https://github.com/Amit-kumar80844/sleepwell-ai-assistant',
   },
   {
     title: 'Desktop Weather Forecaster',
@@ -26,8 +24,7 @@ const projects = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'weather desktop',
     tags: ['Python', 'Weather API', 'Desktop App'],
-    // liveLink: '#',
-    // repoLink: '#',
+    repoLink: 'https://github.com/Amit-kumar80844/desktop-weather-forecaster',
   },
    {
     title: 'MyFinance Tracker Website',
@@ -35,8 +32,7 @@ const projects = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'finance web',
     tags: ['Flask', 'Python', 'HTML', 'CSS', 'SQL', 'Web App'],
-    // liveLink: '#',
-    // repoLink: '#',
+    repoLink: 'https://github.com/Amit-kumar80844/myfinance-tracker-website',
   },
   {
     title: 'Console-Based Learning Management System',
@@ -44,8 +40,7 @@ const projects = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'console code',
     tags: ['Java', 'Console App', 'LMS'],
-    // liveLink: '#',
-    // repoLink: '#',
+    repoLink: 'https://github.com/Amit-kumar80844/console-lms-java',
   }
 ];
 
