@@ -3,44 +3,56 @@ import ProjectCard from '@/components/project-card';
 
 const projects = [
   {
-    title: 'Futuristic Dashboard UI',
-    description: 'A sleek, animated dashboard interface for data visualization, built with Next.js and Recharts, showcasing real-time analytics.',
+    title: 'Android Chat Application',
+    description: 'An Android application built with Java and XML, utilizing Firebase for real-time chat functionalities including adding, deleting, and updating messages.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'dashboard analytics',
-    tags: ['Next.js', 'TypeScript', 'TailwindCSS', 'Recharts', 'UI/UX'],
-    liveLink: '#',
-    repoLink: '#',
+    imageHint: 'chat mobile',
+    tags: ['Java', 'XML', 'Firebase', 'Android'],
+    // liveLink: '#', // Add live link if available
+    // repoLink: '#', // Add repo link if available
   },
   {
-    title: 'AI-Powered Mobile App',
-    description: 'Cross-platform mobile application integrating machine learning models for personalized user experiences. Developed using Kotlin and Python backend.',
+    title: 'SleepWell: AI-Powered Sleep Assistant',
+    description: 'An Android app developed with Kotlin and Jetpack Compose, featuring melodic sleep sounds, phone scheduling (black & white mode, alarms), AI-driven sleep analysis, and story reading. Built with RoomDB, Firebase Auth, API integration, and MVVM.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'mobile app',
-    tags: ['Kotlin', 'Python', 'TensorFlow Lite', 'Firebase', 'Mobile UI'],
-    liveLink: '#',
+    imageHint: 'sleep mobile',
+    tags: ['Kotlin', 'Jetpack Compose', 'RoomDB', 'Firebase Auth', 'MVVM', 'Android', 'AI', 'API Integration'],
+    // liveLink: '#',
+    // repoLink: '#',
   },
   {
-    title: 'Interactive Web Tool',
-    description: 'A collaborative web-based tool for developers, featuring real-time code editing and project management capabilities with a focus on performance.',
+    title: 'Desktop Weather Forecaster',
+    description: 'A desktop application created using Python and a weather API, providing 7-day weather forecasts for any specified city.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'web tool',
-    tags: ['React', 'WebSockets', 'Node.js', 'MongoDB', 'DevTools'],
-    repoLink: '#',
+    imageHint: 'weather desktop',
+    tags: ['Python', 'Weather API', 'Desktop App'],
+    // liveLink: '#',
+    // repoLink: '#',
   },
    {
-    title: 'E-commerce Platform Modernization',
-    description: 'Led the redesign and migration of a legacy e-commerce system to a microservices architecture using Spring Boot and Kafka, improving scalability and performance.',
+    title: 'MyFinance Tracker Website',
+    description: 'A web application for tracking personal finances, built with Flask (backend), HTML/CSS (frontend), and SQL (database). Features include managing bank details, recording expenses, and viewing aggregated expense data.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'ecommerce shopping',
-    tags: ['Java', 'Spring Boot', 'Kafka', 'Microservices', 'AWS'],
-    liveLink: '#',
+    imageHint: 'finance web',
+    tags: ['Flask', 'Python', 'HTML', 'CSS', 'SQL', 'Web App'],
+    // liveLink: '#',
+    // repoLink: '#',
   },
+  {
+    title: 'Console-Based Learning Management System',
+    description: 'A Learning Management System (LMS) developed purely in Java, running in the console. It allows teachers to add/assign courses, enroll students, assign work, and manage various educational tasks.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'console code',
+    tags: ['Java', 'Console App', 'LMS'],
+    // liveLink: '#',
+    // repoLink: '#',
+  }
 ];
 
 const ProjectShowcase: React.FC = () => {
   return (
     <section className="py-12">
-      <SectionTitle title="Featured Projects" description="A selection of my recent work, demonstrating diverse skills and technologies." />
+      <SectionTitle title="Featured Projects" description="A selection of my work, demonstrating diverse skills and technologies." />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {projects.map((project) => (
           <ProjectCard key={project.title} {...project} />

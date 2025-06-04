@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { AtSign, Github, Linkedin, Briefcase, Mail } from 'lucide-react';
+import { AtSign, Github, Linkedin, Briefcase, Mail, Code2 } from 'lucide-react';
 
 const ProfileSection: React.FC = () => {
   return (
@@ -40,6 +40,14 @@ const ProfileSection: React.FC = () => {
             <a href="https://www.linkedin.com/in/amit-kumar-859b57295/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-primary transition-colors group">
               <Linkedin className="w-5 h-5 text-accent group-hover:text-primary transition-colors" />
               <span>linkedin.com/in/amit-kumar-859b57295</span>
+            </a>
+            <a href="https://leetcode.com/u/Amit_maur/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-primary transition-colors group">
+              <Code2 className="w-5 h-5 text-accent group-hover:text-primary transition-colors" />
+              <span>leetcode.com/u/Amit_maur</span>
+            </a>
+            <a href="https://www.geeksforgeeks.org/user/amitsingjsg4/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-primary transition-colors group">
+              <Code2 className="w-5 h-5 text-accent group-hover:text-primary transition-colors" />
+              <span>geeksforgeeks.org/user/amitsingjsg4</span>
             </a>
              <div className="flex items-center gap-3">
                 <Briefcase className="w-5 h-5 text-accent"/>
