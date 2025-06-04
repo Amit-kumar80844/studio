@@ -1,3 +1,4 @@
+
 import AppLayout from '@/components/layout/app-layout';
 import ProjectShowcase from '@/components/project-showcase';
 import SkillPanels from '@/components/skill-panels';
@@ -6,53 +7,101 @@ import SectionTitle from '@/components/shared/section-title'; // For the welcome
 import { Button } from '@/components/ui/button';
 import { ArrowDownToLine } from 'lucide-react';
 
-const kotlinSnippet = `
-data class User(val id: Long, val name: String, val email: String?)
+const kotlinCoroutinesSnippet = `
+import kotlinx.coroutines.*
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
 
-suspend fun fetchUserData(userId: Long): User {
-    // Simulate network call
+@Serializable
+data class Post(val userId: Int, val id: Int, val title: String, val body: String)
+
+suspend fun fetchAndProcessPost(postId: Int): Post {
+    // Simulate a network call
     delay(1000)
-    return User(userId, "Kotlin Coder", "kotlin@example.dev")
+    val mockJsonResponse = """
+        {
+            "userId": 1,
+            "id": $postId,
+            "title": "Fetched Post Title",
+            "body": "This is the body of post $postId."
+        }
+    """.trimIndent()
+    return Json.decodeFromString<Post>(mockJsonResponse)
 }
 
-fun main() {
-    runBlocking {
-        val user = fetchUserData(1)
-        println("Fetched User: \${user.name}")
+fun main() = runBlocking {
+    val post = fetchAndProcessPost(5)
+    println("Title: \${post.title}")
+    println("Body: \${post.body}")
+}
+`;
+
+const kotlinDesktopSnippet = `
+import androidx.compose.desktop.ui.tooling.preview.Preview
+import androidx.compose.material.Button
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.runtime.*
+import androidx.compose.ui.window.Window
+import androidx.compose.ui.window.application
+
+fun main() = application {
+    Window(onCloseRequest = ::exitApplication, title = "My Kotlin Desktop App") {
+        var text by remember { mutableStateOf("Hello, Desktop!") }
+
+        MaterialTheme {
+            Button(onClick = {
+                text = "Button Clicked!"
+            }) {
+                Text(text)
+            }
+        }
+    }
+}
+
+@Preview
+@Composable
+fun AppPreview() {
+    // This is a preview for Jetpack Compose for Desktop
+    // It might not render directly in all IDEs without specific setup
+    MaterialTheme {
+        Text("Hello, Desktop Preview!")
     }
 }
 `;
 
-const pythonSnippet = `
-import asyncio
+const cppDsaSnippet = `
+#include <iostream>
+#include <string>
+#include <algorithm> // For std::reverse
 
-async def generate_report(data_source):
-    print(f"Connecting to {data_source}...")
-    await asyncio.sleep(1)  # Simulate I/O
-    report_data = {"source": data_source, "items": [1, 2, 3], "status": "completed"}
-    print("Report generated.")
-    return report_data
+// Function to check if a string is a palindrome
+bool isPalindrome(const std::string& str) {
+    std::string reversed_str = str;
+    std::reverse(reversed_str.begin(), reversed_str.end());
+    return str == reversed_str;
+}
 
-async def main():
-    report = await generate_report("Sales DB")
-    print(f"Final Report: {report}")
+int main() {
+    std.string testStr1 = "madam";
+    std.string testStr2 = "hello";
 
-if __name__ == "__main__":
-    asyncio.run(main())
-`;
+    if (isPalindrome(testStr1)) {
+        std.cout << testStr1 << " is a palindrome." << std.endl;
+    } else {
+        std.cout << testStr1 << " is not a palindrome." << std.endl;
+    }
 
-const javascriptSnippet = `
-const animateElement = (element, animationName, duration = '1s') => {
-  if (!element) return;
-  element.style.animation = \`\${animationName} \${duration} ease-out\`;
-  element.addEventListener('animationend', () => {
-    element.style.animation = ''; // Reset after animation
-  }, { once: true });
-};
-
-// Usage:
-// const myButton = document.getElementById('myCoolButton');
-// animateElement(myButton, 'fadeInUp');
+    if (isPalindrome(testStr2)) {
+        std.cout << testStr2 << " is a palindrome." << std.endl;
+    } else {
+        std.cout << testStr2 << " is not a palindrome." << std.endl;
+    }
+    // Expected output:
+    // madam is a palindrome.
+    // hello is not a palindrome.
+    return 0;
+}
 `;
 
 
@@ -78,9 +127,9 @@ export default function HomePage() {
         <section className="py-12">
           <SectionTitle title="Code Craftsmanship" description="Snippets from my daily coding adventures." />
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-            <CodeSnippetDisplay language="kotlin" code={kotlinSnippet} title="Async Kotlin Example" />
-            <CodeSnippetDisplay language="python" code={pythonSnippet} title="Python Async Report" />
-            <CodeSnippetDisplay language="javascript" code={javascriptSnippet} title="JS DOM Animation" />
+            <CodeSnippetDisplay language="kotlin" code={kotlinCoroutinesSnippet} title="Kotlin Coroutines & Serialization" />
+            <CodeSnippetDisplay language="kotlin" code={kotlinDesktopSnippet} title="Kotlin Desktop App (Compose)" />
+            <CodeSnippetDisplay language="cpp" code={cppDsaSnippet} title="C++ DSA: Palindrome Check" />
           </div>
         </section>
         
