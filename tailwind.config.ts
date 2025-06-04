@@ -88,11 +88,6 @@ export default {
             height: '0',
           },
         },
-        subtleGradientShift: { // Added for background animation
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
-        },
         pulseGlow: {
           '0%, 100%': { boxShadow: '0 0 5px hsl(var(--primary)/0.7), 0 0 10px hsl(var(--primary)/0.5)' },
           '50%': { boxShadow: '0 0 10px hsl(var(--primary)/0.9), 0 0 20px hsl(var(--primary)/0.7)' },
@@ -101,7 +96,6 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'subtle-gradient': 'subtleGradientShift 20s ease infinite', // Added for background animation
         'pulse-glow': 'pulseGlow 3s infinite ease-in-out',
       },
       boxShadow: {
