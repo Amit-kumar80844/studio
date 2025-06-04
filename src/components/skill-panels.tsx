@@ -1,6 +1,6 @@
 import SectionTitle from '@/components/shared/section-title';
 import SkillCard from '@/components/skill-card';
-import { Code2, Smartphone, Database } from 'lucide-react'; // Updated imports
+import { Code2, Smartphone, Database, Shell, FileCode, Palette, PenTool, BrainCircuit } from 'lucide-react'; // Updated imports
 
 const skills = [
   { title: 'Android Development', icon: <Smartphone /> },
@@ -12,6 +12,12 @@ const skills = [
   { title: 'SQL', icon: <Database /> },
   { title: 'Firebase', icon: <Database /> },
   { title: 'Room Database', icon: <Database /> },
+  { title: 'Linux Shell', icon: <Shell /> },
+  { title: 'HTML', icon: <FileCode /> },
+  { title: 'CSS', icon: <Palette /> },
+  { title: 'XML', icon: <FileCode /> },
+  { title: 'Figma', icon: <PenTool /> },
+  { title: 'DSA (200+ problems)', icon: <BrainCircuit /> },
 ];
 
 const SkillPanels: React.FC = () => {
