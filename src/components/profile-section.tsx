@@ -9,12 +9,12 @@ const ProfileSection: React.FC = () => {
         <CardHeader className="items-center text-center p-4 md:p-6">
           <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-primary shadow-glow-primary mb-4">
             <Image
-              src="https://placehold.co/200x200.png"
+              src="https://avatars.githubusercontent.com/u/156497411?s=400&u=7fdd49ac12600a677a5266ba09b6268b72c1def6&v=4"
               alt="Profile Photo - Amit Kumar"
               width={200}
               height={200}
               className="object-cover"
-              data-ai-hint="professional portrait"
+              data-ai-hint="github avatar"
             />
           </div>
           <CardTitle className="text-2xl font-headline text-primary">Amit Kumar</CardTitle>
