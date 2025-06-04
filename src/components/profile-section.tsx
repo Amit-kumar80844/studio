@@ -18,7 +18,7 @@ const ProfileSection: React.FC = () => {
             />
           </div>
           <CardTitle className="text-2xl font-headline text-primary">Amit Kumar</CardTitle>
-          <CardDescription className="text-accent font-medium">IIIT Kottayam Student - 3rd Year</CardDescription>
+          <CardDescription className="text-accent font-medium">IIIT Kottayam Student</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4 text-sm">
           <p className="text-center text-muted-foreground leading-relaxed">
