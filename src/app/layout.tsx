@@ -15,6 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <meta property="og:title" content="Amit Kumar - Android Developer" />
+        <meta property="og:url" content="https://amit-kumar80844.github.io/studio/" />
+        <meta property="og:type" content="website" />
         <meta name="google-site-verification" content="racop2sRv689NDUgfTzx98JELwFD-SiGhLbz7b_EFOU" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
