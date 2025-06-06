@@ -13,10 +13,10 @@
     --popover: 210 22% 12%; /* Darker for popovers */
     --popover-foreground: 210 15% 95%;
 
-    --card: 210 22% 14%; /* Slightly different from background for cards, a bit darker */
+    --card: 210 22% 14%; 
     --card-foreground: 210 15% 95%;
 
-    --border: 210 15% 28%; /* Subtle borders, slightly lighter than pure black */
+    --border: 210 15% 28%; 
     --input: 210 15% 25%; /* Input background, distinct from main bg */
 
     --primary: 161 100% 70%; /* Cyberpunk Green */
